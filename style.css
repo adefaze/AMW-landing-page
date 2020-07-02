@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.img {
+  width: 90px;
+}
+
+.mobile {
+  display: none;
+}
+
+nav {
+  height: 12vh;
+  background-color: #5b78c7;
+  position: sticky;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+
+  nav {
+    position: relative;
+    z-index: 21;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .toggle-icon {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .nav-links {
+    height: 50vh;
+    background-color: rgb(84, 150, 236);
+    width: 100%;
+    position: flex;
+    flex-direction: column;
+    clip-path: circle(100px at 100% -40%);
+    -webkit-clip-path: circle(100px at 100% -40%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    clip-path: circle(1000px at 100% -40%);
+    -webkit-clip-path: circle(1000px at 100% -40%);
+    pointer-events: all;
+  }
+}
+
+.carousel .slider {
+  z-index: 1;
+}
+
+.carousel-image {
+  width: 100%;
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 600px !important;
+}
+
+.location {
+  background-color: rgb(18, 112, 252);
+}
+
+.location:hover {
+  background-color: rgb(93, 175, 243);
+}
+
+.hero {
+  width: 120px;
+  height: 3px;
+  background-color: rgb(96, 170, 255);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.media {
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+.media-logo {
+  width: 150px;
+  margin: 20px;
+  opacity: 1;
+}
+
+.media-logo:hover {
+  opacity: 0.2;
+}
+
+.partners {
+  text-align: center;
+}
+
+.partners-logo {
+  width: 150px;
+  margin: 20px;
+  opacity: 1;
+}
+
+.partners-logo:hover {
+  opacity: 0.2;
+}
+
+footer {
+  height: 200px;
+  background-color: grey;
+  position: relative;
+}
+
+.links {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.links a {
+  color: white;
+}
+
+.copyright {
+  background-color: black;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
